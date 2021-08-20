@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-movies-ni": {
+      "hosting": {
+        "angular-movies": [
+          "angular-movies-ni"
+        ]
+      }
+    }
+  }
+}
