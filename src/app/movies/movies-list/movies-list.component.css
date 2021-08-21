@@ -1,0 +1,26 @@
+.content {
+  padding: 32px 12%;
+}
+
+mat-card {
+  background-color: #252635;
+  background-size: cover;
+  color: white;
+}
+
+mat-card-actions p {
+  text-align: center;
+}
+
+mat-card-content p {
+  text-align: center;
+  font-size: 10pt;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+mat-card-title {
+  font-weight: 500;
+}

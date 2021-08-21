@@ -1,0 +1,15 @@
+#footer {
+   background-color: #252635;
+   color: white;
+   position: absolute;
+   bottom: 0;
+   height: 92px;
+   width: 100%;
+   justify-content: center;
+}
+#copyright {
+   font-size: 12px;
+   font-weight: 300;
+   opacity: 60%;
+   margin-top: 70px;
+}

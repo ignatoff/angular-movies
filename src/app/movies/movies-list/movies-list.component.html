@@ -1,0 +1,27 @@
+<div class="content">
+
+   <div fxLayout="row wrap" fxLayoutGap="32px grid">
+
+      <div fxFlex="20%" *ngFor="let c of [1, 2, 3, 4, 5]">
+         <mat-card class="movie-card">
+            <mat-card-header>
+               <mat-card-title>Wrath of Man {{c}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="https://images.redbox.com/Images/EPC/boxArtVertical/211568.jpg"
+               alt="Photo of a Shiba Inu">
+            <mat-card-content>
+               <p>
+                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+               </p>
+            </mat-card-content>
+            <mat-card-actions>
+               <p>
+                  <a>Details</a> 
+               </p>
+            </mat-card-actions>
+         </mat-card>
+      </div>
+      
+   </div>
+
+</div>

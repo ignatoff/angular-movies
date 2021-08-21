@@ -1,4 +1,15 @@
-mat-toolbar {
-   background-color: #2a2250;
+#header {
+   background-color: #252635;
    color: white;
+   /* width: 80%; */
+   margin: auto;
+   justify-content: space-evenly;
+   height: 48px;
+}
+
+#logo {
+   color: #ffcc00;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: 24pt;
+   /* margin-left: 20px; */
 }
