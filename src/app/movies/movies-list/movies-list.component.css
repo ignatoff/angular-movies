@@ -24,3 +24,14 @@ mat-card-header {
 mat-card-title {
   font-weight: 500;
 }
+
+a {
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffcc00;
+  transition: 0.3s;  
+}

@@ -4,6 +4,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     CommonModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule
   ],
   exports: [
     MoviesListComponent

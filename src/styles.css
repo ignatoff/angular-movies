@@ -15,13 +15,3 @@ body {
 #wrap {
    padding-bottom: 92px;
 }
-
-a {
-   font-weight: 500;
-}
-
-a:hover {
-   color: #ffcc00;
-   transition: 0.3s;  
-   cursor: pointer;
-}

@@ -11,7 +11,7 @@
    color: #ffcc00;
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    font-size: 24pt;
-   /* margin-left: 20px; */
+   cursor: pointer;
 }
 
 .vert-line {
@@ -19,4 +19,15 @@
    margin: 0 14px;
    border: 1px solid #ffcc00;
    border-radius: 1px;
+}
+
+a {
+   font-weight: 500;
+   color: white;
+   text-decoration: none;
+}
+
+a:hover {
+   color: #ffcc00;
+   transition: 0.3s;  
 }
