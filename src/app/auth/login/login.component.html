@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="login-block">
+   <form [formGroup]="form" (ngSubmit)="login()">
+      <h1>Log In</h1>
+
+      <input type="email" placeholder="Your Email" id="email" formControlName="email" email required/>
+      
+      <ng-container *ngIf="form.get('email')?.touched">
+         <p *ngIf="form.get('email')?.errors?.required" class="error">
+             Email is required
+         </p>
+         <p *ngIf="form.get('email')?.errors?.email" class="error">
+             Email is not valid
+         </p>
+      </ng-container>
+
+      <input type="password" placeholder="Your Password" id="password" formControlName="password" minlength="6" required/>
+      
+      <ng-container *ngIf="form.get('password')?.touched">
+         <p *ngIf="form.get('password')?.errors?.required" class="error">
+             Password is required
+         </p>
+         <p *ngIf="form.get('password')?.errors?.minlength" class="error">
+             Password must be at least 6 characters
+         </p>
+     </ng-container>
+
+     <button>Submit</button>
+      <p class="account">
+         Have an account?
+         <a routerLink="/signup">Sign Up</a>
+     </p>
+   </form>
+</div>

@@ -1,11 +1,21 @@
 <mat-toolbar id="header">
+
   <span id="logo" routerLink="/">SMDb</span>
-  <a routerLink="/">Home</a>
-  <a routerLink="/movies">Movies</a>
-  <a routerLink="/add-movie">Add Movie</a>
-  <div>
-    <a routerLink="/login">Log In</a>
+
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/movies">Movies</a></li>
+  <li><a routerLink="/add-movie">Add Movie</a></li>
+
+  <div *ngIf="!isAuth" fxLayout>
+    <li><a routerLink="/login">Log In</a></li>
     <div class="vert-line"></div>
-    <a routerLink="/register">Sign Up</a>
+    <li><a routerLink="/signup">Sign Up</a></li>
   </div>
+
+  <div *ngIf="isAuth" fxLayout>
+    <li><a routerLink="/login">Welcome</a></li>
+    <div class="vert-line"></div>
+    <li><a (click)="onLogout()">Sign Out</a></li>
+  </div>
+  
 </mat-toolbar>

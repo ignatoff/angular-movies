@@ -12,6 +12,8 @@ import { environment } from 'src/environments/environment';
 import { MoviesModule } from 'src/app/movies/movies.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { MaterialModule } from 'src/app/material.module';
+import { AuthService } from 'src/app/auth/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,17 +22,20 @@ import { MaterialModule } from 'src/app/material.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     MoviesModule,
     MaterialModule,
-
+    FormsModule,
+    ReactiveFormsModule,
+    
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     FlexLayoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

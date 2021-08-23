@@ -1,7 +1,6 @@
 #header {
    background-color: #252635;
    color: white;
-   /* width: 80%; */
    margin: auto;
    justify-content: space-evenly;
    height: 48px;
@@ -12,6 +11,12 @@
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
    font-size: 24pt;
    cursor: pointer;
+}
+
+li {
+   list-style: none;
+   padding: 0;
+   margin: 0;
 }
 
 .vert-line {

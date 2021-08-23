@@ -1,0 +1,35 @@
+<div class="login-block">
+   <form #form="ngForm" (ngSubmit)="signUp(form)">
+      <h1>Sign Up</h1>
+
+      <input #emailInput="ngModel" ngModel type="email" placeholder="Your Email" id="email" name="email" email required/>
+      
+      <ng-container *ngIf="emailInput.touched">
+         <p *ngIf="emailInput.errors?.required" class="error">
+             Email is required
+         </p>
+         <p *ngIf="emailInput.errors?.email" class="error">
+             Email is not valid
+         </p>
+      </ng-container>
+
+      <input #passwordInput="ngModel" ngModel type="password" placeholder="Your Password" id="password" name="password" minlength="6" required/>
+      
+      <ng-container *ngIf="passwordInput.touched">
+         <p *ngIf="passwordInput.errors?.required" class="error">
+             Password is required
+         </p>
+         <p *ngIf="passwordInput.errors?.minlength" class="error">
+             Password must be at least 6 characters
+         </p>
+     </ng-container>
+
+      <input #confirmPassInput="ngModel" ngModel type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" minlength="6" required/>
+      
+      <button>Submit</button>
+      <p class="account">
+         Have an account?
+         <a routerLink="/login">Log In</a>
+     </p>
+   </form>
+</div>

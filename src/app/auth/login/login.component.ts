@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthService } from 'src/app/auth/auth.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +10,26 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private fireAuth: AngularFireAuth) { }
+  form!: FormGroup;
+
+  constructor(private authService: AuthService) { }
+
+  login() {
+    this.authService.login({
+      email: this.form.value.email,
+      password: this.form.value.password
+    });
+  }
 
   ngOnInit(): void {
-    this.fireAuth.createUserWithEmailAndPassword('abv@abv.bg', '123123')
-      .then(user => console.log(user));
+    this.form = new FormGroup({
+      email: new FormControl('', {
+        validators: [Validators.email, Validators.required]
+      }),
+      password: new FormControl('', {
+        validators: [Validators.required]
+      })
+    });
   }
 
 }
