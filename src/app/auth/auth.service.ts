@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
    authChange = new Subject<boolean>();
-   private user!: User | null;
+   user: User | null | undefined = undefined;
 
    constructor(private router: Router) {}
 
@@ -38,8 +38,8 @@ export class AuthService {
       return { ...this.user };
    }
 
-   isAuth() {
-      return this.user != null;
+   isAuth(): boolean {
+      return !!this.user;
    }
 
    private authSuccess() {

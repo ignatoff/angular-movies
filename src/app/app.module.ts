@@ -12,9 +12,9 @@ import { environment } from 'src/environments/environment';
 import { MoviesModule } from 'src/app/movies/movies.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { MaterialModule } from 'src/app/material.module';
-import { AuthService } from 'src/app/auth/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AuthModule } from 'src/app/auth/auth.module';
 
 
 @NgModule({
@@ -29,6 +29,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    AuthModule,
     
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
@@ -37,7 +38,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
     
     AppRoutingModule,
   ],
-  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

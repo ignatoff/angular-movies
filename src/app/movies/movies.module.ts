@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { MovieComponent } from './movie/movie.component';
+import { MoviesRoutingModule } from 'src/app/movies/movies-routing.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MovieComponent } from './movie/movie.component';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
-    RouterModule
+    RouterModule,
+    MoviesRoutingModule
   ],
   exports: [
     MoviesListComponent
