@@ -1,23 +1,51 @@
 .bgr {
    height: 84.8vh;
-   background-image: url('../../../assets/retro-camera-wake.jpg');
+   background-image: url('../../../assets/retro-camera-wake-24-10.jpg');
    background-size: cover;
 }
 
-.box {   
+.box {
    margin: auto;
-   max-width: 64%;
-   border-radius: 20px;
-   background-color: #131422;
-   border: 1px solid #ffcc00;
-   opacity: 75%;
+   max-width: 55%;
+   border-radius: 10px;
+   background-color: #131422b7;
+   border-top: 5px solid #ffcc00;
+}
+
+button {
+   width: 180px;
+   height: 38px;
+   margin: auto;
+   background: #ffcc00;
+   box-sizing: border-box;
+   border-radius: 5px;
+   border: none;
+   color: #252635;
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 12pt;
+   font-family: Roboto;
+   letter-spacing: 1px;
+   transition: 0.3s;
+   outline: none;
+   cursor: pointer;
+}
+
+button:hover {
+   background: #ffe17c;
+}
+
+.btns {
+   padding: 24px;
+   justify-content: space-evenly;
+   display: flex;
 }
 
 p {
    text-align: center;
    margin: auto;
    padding: 32px;
-   max-width: 64%;
+   max-width: 75%;
    color: white;
    font-weight: 500;
 }

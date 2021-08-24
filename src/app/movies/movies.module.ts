@@ -5,11 +5,15 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
+import { AddMovieComponent } from './add-movie/add-movie.component';
+import { MovieComponent } from './movie/movie.component';
 
 
 @NgModule({
   declarations: [
-    MoviesListComponent
+    MoviesListComponent,
+    AddMovieComponent,
+    MovieComponent
   ],
   imports: [
     CommonModule,

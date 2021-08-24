@@ -5,6 +5,7 @@
 mat-card {
   background-color: #252635;
   background-size: cover;
+  border-top: 5px solid #ffcc00;
   color: white;
 }
 
@@ -25,13 +26,21 @@ mat-card-title {
   font-weight: 500;
 }
 
-a {
+button {
+  width: 40%;
+  height: 32px;
+  font-family: Roboto;
   font-weight: 500;
-  color: white;
+  font-size: 12pt;
+  background: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  color: #252635;
   text-decoration: none;
 }
 
-a:hover {
-  color: #ffcc00;
-  transition: 0.3s;  
+button:hover {
+  background: #ffe17c;
+  transition: 0.3s; 
+  cursor: pointer; 
 }

@@ -24,7 +24,6 @@
    border-radius: 5px;
    border: 1px solid #515262;
    margin-top: 20px;
-   /* margin-bottom: 20px; */
    font-size: 10pt;
    font-family: Roboto;
    padding: 0 20px 0 20px;
@@ -62,7 +61,7 @@
    background: #ffcc00;
    box-sizing: border-box;
    border-radius: 5px;
-   border: 1px solid #ffa100;
+   border: none;
    color: #252635;
    font-weight: bold;
    text-transform: uppercase;

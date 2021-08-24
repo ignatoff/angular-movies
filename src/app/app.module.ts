@@ -14,6 +14,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { MaterialModule } from 'src/app/material.module';
 import { AuthService } from 'src/app/auth/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
     
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
