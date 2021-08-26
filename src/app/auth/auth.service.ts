@@ -1,8 +1,9 @@
-import { User } from 'src/app/shared/interfaces/user.model';
-import { AuthData } from 'src/app/shared/interfaces/auth-data.model';
-import { Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
+
+import { User } from 'src/app/shared/interfaces/user.model';
+import { AuthData } from 'src/app/shared/interfaces/auth-data.model';
 
 @Injectable()
 export class AuthService {

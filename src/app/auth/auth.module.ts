@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/auth/auth.service';
 import { AuthRoutingModule } from 'src/app/auth/auth-routing.module';
 import { ProfileComponent } from './profile/profile.component';
@@ -20,7 +20,6 @@ import { ProfileComponent } from './profile/profile.component';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    AngularFireAuthModule,
     AuthRoutingModule
   ],
   providers:[

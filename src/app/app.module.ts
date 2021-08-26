@@ -23,6 +23,7 @@ import { AuthModule } from 'src/app/auth/auth.module';
   ],
   imports: [
     BrowserModule,
+
     CoreModule,
     MoviesModule,
     MaterialModule,

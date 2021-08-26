@@ -1,8 +1,10 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Subject } from 'rxjs';
+
 import { AuthService } from 'src/app/auth/auth.service';
 import { sameValueFactory } from 'src/app/shared/validator';
-import { Subject } from 'rxjs';
+
 
 @Component({
   selector: 'app-signup',

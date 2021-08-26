@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { MovieService } from 'src/app/movies/movie.service';
+
 
 @Component({
   selector: 'app-add-movie',

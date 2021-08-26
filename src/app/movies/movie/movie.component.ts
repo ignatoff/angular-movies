@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { Movie } from 'src/app/shared/interfaces/movie.model';
 import { MovieService } from 'src/app/movies/movie.service';
-import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
 
 
 @Component({

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+
 import { MovieService } from 'src/app/movies/movie.service';
 import { Movie } from 'src/app/shared/interfaces/movie.model';
-import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-movies-list',
@@ -17,6 +18,6 @@ export class MoviesListComponent {
   }
 
   getMovieId(id: string) {
-    console.log(id);    
+    // console.log(id);    
   }
 }
