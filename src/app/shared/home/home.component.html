@@ -5,7 +5,7 @@
          iusto rerum tenetur veniam dolor nostrum voluptatem. Mollitia praesentium consectetur voluptates, veniam vitae
          earum? Ipsum.
       </p>
-      <div class="btns">
+      <div *ngIf="!isAuth" class="btns">
          <button routerLink="/login">Log In</button>
          <button routerLink="/signup">Sign Up</button>
       </div>

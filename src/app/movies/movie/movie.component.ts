@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { Movie } from 'src/app/shared/interfaces/movie.model';
+import { MovieService } from 'src/app/movies/movie.service';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css']
 })
-export class MovieComponent implements OnInit {
+export class MovieComponent {
 
-  constructor() { }
+  movie: Movie | undefined;
+  movieSubscription!: Subscription;
 
-  ngOnInit(): void {
+  constructor(
+    private movieService: MovieService,
+    private activatedRoute: ActivatedRoute,
+    ) { 
+      this.fetchMovie();
+    }
+
+  fetchMovie() {
+    // this.movieSubscription = this.movieService.movieDetails.subscribe()
   }
-
 }

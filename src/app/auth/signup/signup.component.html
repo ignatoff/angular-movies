@@ -1,32 +1,41 @@
 <div class="login-block">
-   <form #form="ngForm" (ngSubmit)="signUp(form)">
+   <form [formGroup]="form" (ngSubmit)="signUp()">
       <h1>Sign Up</h1>
 
-      <input #emailInput="ngModel" ngModel type="email" placeholder="Your Email" id="email" name="email" email required/>
+      <input type="email" placeholder="Your Email" id="email" formControlName="email" email required/>
       
-      <ng-container *ngIf="emailInput.touched">
-         <p *ngIf="emailInput.errors?.required" class="error">
+      <ng-container *ngIf="form.get('email')?.touched">
+         <p *ngIf="form.get('email')?.errors?.required" class="error">
              Email is required
          </p>
-         <p *ngIf="emailInput.errors?.email" class="error">
+         <p *ngIf="form.get('email')?.errors?.email" class="error">
              Email is not valid
          </p>
       </ng-container>
 
-      <input #passwordInput="ngModel" ngModel type="password" placeholder="Your Password" id="password" name="password" minlength="6" required/>
+      <input type="password" placeholder="Your Password" id="password" formControlName="password" minlength="6" required/>
       
-      <ng-container *ngIf="passwordInput.touched">
-         <p *ngIf="passwordInput.errors?.required" class="error">
+      <ng-container *ngIf="form.get('password')?.touched">
+         <p *ngIf="form.get('password')?.errors?.required" class="error">
              Password is required
          </p>
-         <p *ngIf="passwordInput.errors?.minlength" class="error">
+         <p *ngIf="form.get('password')?.errors?.minlength" class="error">
              Password must be at least 6 characters
          </p>
      </ng-container>
 
-      <input #confirmPassInput="ngModel" ngModel type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" minlength="6" required/>
+      <input type="password" placeholder="Confirm Password" id="confirmPassword" formControlName="confirmPassword" minlength="6" required/>
       
-      <button>Submit</button>
+      <ng-container *ngIf="form.get('confirmPassword')?.touched">
+        <p *ngIf="form.get('confirmPassword')?.errors?.required" class="error">
+            Password confirmation is required
+        </p>
+        <p *ngIf="form.get('confirmPassword')?.errors?.sameValue" class="error">
+            Passwords don't match
+        </p>
+    </ng-container>
+
+      <button>Sign Up</button>
       <p class="account">
          Have an account?
          <a routerLink="/login">Log In</a>

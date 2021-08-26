@@ -30,9 +30,10 @@ a {
    font-weight: 500;
    color: white;
    text-decoration: none;
+   cursor: pointer;
+   transition: 0.3s;  
 }
 
 a:hover {
    color: #ffcc00;
-   transition: 0.3s;  
 }

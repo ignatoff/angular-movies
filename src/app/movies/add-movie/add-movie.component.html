@@ -1,1 +1,62 @@
-<p>add-movie works!</p>
+<div class="login-block">
+   <form [formGroup]="form" (ngSubmit)="addMovie()">
+      <h1>Add Movie</h1>
+
+      <input type="text" placeholder="Title" id="email" formControlName="title" required />
+
+      <ng-container *ngIf="form.get('title')?.touched">
+         <p *ngIf="form.get('title')?.errors?.required" class="error">
+            Title is required
+         </p>
+      </ng-container>
+
+      <textarea placeholder="Plot" id="plot" formControlName="plot" required minlength="15"></textarea>
+
+      <ng-container *ngIf="form.get('plot')?.touched">
+         <p *ngIf="form.get('plot')?.errors?.required" class="error">
+            Plot is required
+         </p>
+         <p *ngIf="form.get('plot')?.errors?.minlength" class="error">
+            Plot must be at least 15 characters long
+         </p>
+      </ng-container>
+
+      <input type="text" placeholder="Image URL" id="imageUrl" formControlName="imageUrl" required />
+
+      <ng-container *ngIf="form.get('imageUrl')?.touched">
+         <p *ngIf="form.get('imageUrl')?.errors?.required" class="error">
+            Image is required
+         </p>
+      </ng-container>
+
+      <input type="text" placeholder="Genre" id="genre" formControlName="genre" required />
+
+      <ng-container *ngIf="form.get('genre')?.touched">
+         <p *ngIf="form.get('genre')?.errors?.required" class="error">
+            Genre is required
+         </p>
+      </ng-container>
+
+      <input type="text" placeholder="Director" id="director" formControlName="director" required />
+
+      <ng-container *ngIf="form.get('director')?.touched">
+         <p *ngIf="form.get('director')?.errors?.required" class="error">
+            Director is required
+         </p>
+      </ng-container>
+
+      <input type="text" placeholder="Stars" id="stars" formControlName="stars" required />
+
+      <ng-container *ngIf="form.get('stars')?.touched">
+         <p *ngIf="form.get('stars')?.errors?.required" class="error">
+            Stars is required
+         </p>
+      </ng-container>
+
+      <div class="btns">
+         <button routerLink="/movies">Cancel</button>
+         <button>Save</button>
+      </div>
+
+   </form>
+</div>

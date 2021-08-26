@@ -1,0 +1,110 @@
+.login-block {
+   width: 420px;
+   padding: 20px;
+   background: #252635;
+   border-radius: 5px;
+   border-top: 5px solid #ffcc00;
+   margin: 48px auto;
+}
+
+.login-block h1 {
+   text-align: center;
+   color: #fff;
+   font-size: 16pt;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+.login-block input {
+   width: 100%;
+   height: 42px;
+   box-sizing: border-box;
+   border-radius: 5px;
+   border: none;
+   margin-top: 20px;
+   font-size: 10pt;
+   font-family: Roboto;
+   padding: 0 20px 0 20px;
+   outline: none;
+   background: #515262;
+   background-size: 16px 80px;
+   color: white;
+}
+
+.login-block select {
+   width: 100%;
+   height: 42px;
+   box-sizing: border-box;
+   border-radius: 5px;
+   border: none;
+   margin-top: 20px;
+   font-size: 10pt;
+   font-family: Roboto;
+   padding: 0 20px 0 20px;
+   outline: none;
+   background: #515262;
+   background-size: 16px 80px;
+   color: white;
+}
+
+.login-block textarea {
+   width: 100%;
+   height: 84px;
+   box-sizing: border-box;
+   border-radius: 5px;
+   border: none;
+   margin-top: 20px;
+   font-size: 10pt;
+   font-family: Roboto;
+   padding: 0 20px 0 20px;
+   outline: none;
+   background: #515262;
+   background-size: 16px 80px;
+   color: white;
+}
+
+.login-block input:active, .login-block input:focus {
+   border: 1px solid #ffcc00;
+}
+
+.login-block textarea:active, .login-block textarea:focus {
+   border: 1px solid #ffcc00;
+}
+
+div.btns {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.login-block button {
+   width: 30%;
+   height: 36px;
+   margin-top: 30px;
+   background: #ffcc00;
+   box-sizing: border-box;
+   border-radius: 5px;
+   border: none;
+   color: #252635;
+   font-weight: 500;
+   /* text-transform: uppercase; */
+   font-size: 12pt;
+   font-family: Roboto;
+   /* letter-spacing: 1px; */
+   transition: 0.3s; 
+   outline: none;
+   cursor: pointer;
+}
+
+.login-block button:hover {
+   background: #ffe17c;
+}
+
+p.error {
+   color: rgb(255, 87, 57);
+   margin-top: 5px;
+   margin-bottom: 0;
+   padding-left: 10px;
+   font-size: 10pt;
+}

@@ -2,10 +2,11 @@
    height: 84.8vh;
    background-image: url('../../../assets/retro-camera-wake-24-10.jpg');
    background-size: cover;
+   display: flex;
 }
 
 .box {
-   margin: auto;
+   margin: 48px auto auto auto;
    max-width: 55%;
    border-radius: 10px;
    background-color: #131422b7;

@@ -6,23 +6,23 @@ import { AuthService } from 'src/app/auth/auth.service';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-   constructor(private authService: AuthService, private router: Router) { }
+   constructor(private router: Router, private authService: AuthService) { }
 
    canActivate(route: import("@angular/router").ActivatedRouteSnapshot, state: import("@angular/router").RouterStateSnapshot): boolean | import("@angular/router").UrlTree | import("rxjs").Observable<boolean | import("@angular/router").UrlTree> | Promise<boolean | import("@angular/router").UrlTree> {
-      const { authenticationRequired, authFailureRedirectUrl } = route.data;
+      const { authRequired, authFailureRedirectUrl } = route.data;
 
       if (
-         typeof authenticationRequired === 'boolean' &&
-         authenticationRequired === this.authService.isAuth()
+         typeof authRequired === 'boolean' &&
+         authRequired === this.authService.isAuth()
       ) { return true; }
 
       let authRedirectUrl = authFailureRedirectUrl;
-      
-      if (authenticationRequired) {
+
+      if (authRequired) {
          const loginRedirectUrl = route.url.reduce((acc, s) => `${acc}/${s.path}`, '');
-         authRedirectUrl +=`?redirectUrl=${loginRedirectUrl}`;
+         authRedirectUrl += `?redirectUrl=${loginRedirectUrl}`;
       }
 
-      return this.router.parseUrl(authRedirectUrl || '/login');
+      return this.router.parseUrl(authRedirectUrl || '/');
    }
 }

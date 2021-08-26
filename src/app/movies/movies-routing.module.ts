@@ -9,16 +9,26 @@ import { MovieComponent } from 'src/app/movies/movie/movie.component';
 const routes: Routes = [
    {
       path: 'movies',
-      component: MoviesListComponent
+      children: [
+         {
+            path: '',
+            pathMatch: 'full',
+            component: MoviesListComponent
+         },
+         {
+            path: ':movieId',
+            component: MovieComponent
+         }
+      ],
    },
    {
       path: 'add-movie',
       component: AddMovieComponent,
-      canActivate: [AuthGuard]
-   },
-   {
-      path: 'movie',
-      component: MovieComponent
+      // canActivate: [AuthGuard],
+      // data: {
+      //    authRequired: true,
+      //    authFailureRedirectUrl: '/login'
+      // }
    }
 ]
 
