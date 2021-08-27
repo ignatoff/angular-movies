@@ -32,8 +32,12 @@ export class MovieService {
     return this.movies.slice();
   }
 
-  movieDetails(id: string) {
-    this.details = this.movies.find(m => m.movieId === id);    
-    // this.movieSelected.next(this.details);
+  // movieDetails() {
+    // this.details = this.getMovieId
+    // console.log(this.details);
+  // }
+  
+  getMovieId(id: string): Movie | undefined {
+    return this.movies.find(m => m.movieId === id);    
   }
 }

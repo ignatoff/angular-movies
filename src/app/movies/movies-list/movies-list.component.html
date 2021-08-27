@@ -1,7 +1,7 @@
 <div class="content">
 
       <div fxLayout="row wrap" fxLayoutGap="32px grid">
-         <div fxFlex="20%" *ngFor="let movie of movies" id="{{movie.movieId}}">
+         <div fxFlex="20%" *ngFor="let movie of movies | async" id="{{movie.title}}">
             <mat-card class="movie-card">
                <mat-card-header>
                   <mat-card-title>{{movie.title}}</mat-card-title>
@@ -12,7 +12,7 @@
                </mat-card-content>
                <mat-card-actions>
                   <p>
-                     <button (click)="getMovieId(movie.movieId)" [routerLink]="['/movies', movie.movieId]">Details</button>
+                     <button (click)="movieService.getMovieId(movie.movieId)" [routerLink]="['/movies', movie.movieId]">Details</button>
                   </p>
                </mat-card-actions>
             </mat-card>

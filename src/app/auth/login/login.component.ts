@@ -15,11 +15,11 @@ export class LoginComponent {
   form!: FormGroup;
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private fb: FormBuilder
-  ) { 
+  ) {
     this.form = this.fb.group({
       email: ['', [Validators.email, Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -28,13 +28,14 @@ export class LoginComponent {
 
   login() {
 
-    if (this.form.invalid) { return; }    
+    if (this.form.invalid) { return; }
 
-    this.authService.login({
-      email: this.form.value.email,
-      password: this.form.value.password
-    });
+    const data = this.form.value;
+    this.authService.login(data.email, data.password);
+
     const redirectUrl = this.activatedRoute.snapshot.queryParams.redirectUrl || '/';
     this.router.navigate([redirectUrl]);
+    console.log();
+    
   }
 }

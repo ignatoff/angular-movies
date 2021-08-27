@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 
 import { AuthService } from 'src/app/auth/auth.service';
 import { sameValueFactory } from 'src/app/shared/validator';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,9 @@ export class SignupComponent implements OnDestroy {
   form!: FormGroup;
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
     private fb: FormBuilder
   ) {
     this.form = this.fb.group({
@@ -31,13 +34,14 @@ export class SignupComponent implements OnDestroy {
   }
 
   signUp(): void {
-    
-    if (this.form.invalid) { return; }    
 
-    this.authService.signupUser({
-      email: this.form.value.email,
-      password: this.form.value.password
-    });
+    if (this.form.invalid) { return; }
+
+    const data = this.form.value;
+    this.authService.signUp(data.email, data.password);
+
+    const redirectUrl = this.activatedRoute.snapshot.queryParams.redirectUrl || '/';
+    this.router.navigate([redirectUrl]);
   }
 
   ngOnDestroy(): void {

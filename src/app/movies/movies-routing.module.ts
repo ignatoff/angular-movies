@@ -24,11 +24,11 @@ const routes: Routes = [
    {
       path: 'add-movie',
       component: AddMovieComponent,
-      canActivate: [AuthGuard],
-      data: {
-         authRequired: true,
-         authFailureRedirectUrl: '/login'
-      }
+      // canActivate: [AuthGuard],
+      // data: {
+         // authRequired: true,
+         // authFailureRedirectUrl: '/login'
+      // }
    }
 ]
 

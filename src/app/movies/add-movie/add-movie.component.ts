@@ -19,6 +19,11 @@ export class AddMovieComponent {
   ) { 
     this.form = this.fb.group({
       title: ['', [Validators.required]],
+      plot: ['', [Validators.required]],
+      imageUrl: ['', [Validators.required, Validators.minLength(15)]],
+      genre: ['', [Validators.required]],
+      director: ['', [Validators.required]],
+      // stars: ['', [Validators.required]],
     });
   }
 

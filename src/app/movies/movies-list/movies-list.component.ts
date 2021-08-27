@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 
+import { AngularFirestore } from '@angular/fire/firestore';
+
 import { MovieService } from 'src/app/movies/movie.service';
 import { Movie } from 'src/app/shared/interfaces/movie.model';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,13 +14,14 @@ import { Movie } from 'src/app/shared/interfaces/movie.model';
 })
 export class MoviesListComponent {
 
-  movies: Movie[] = [];
+  movies: Observable<any>;
 
-  constructor(private movieService: MovieService) { 
-    this.movies = this.movieService.getMovies();
+  constructor(
+    public movieService: MovieService,
+    private afs: AngularFirestore
+  ) {
+    this.movies = this.afs.collection('movies').valueChanges();
   }
 
-  getMovieId(id: string) {
-    // console.log(id);    
-  }
+
 }
