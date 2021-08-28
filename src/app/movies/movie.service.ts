@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Movie } from 'src/app/shared/interfaces/movie.model';
 import { Subject } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -27,17 +28,19 @@ export class MovieService {
     }
   ];
   private details: Movie | undefined;
+  private afs!: AngularFirestore;
 
   getMovies() {
     return this.movies.slice();
   }
 
   // movieDetails() {
-    // this.details = this.getMovieId
-    // console.log(this.details);
+  // this.details = this.getMovieId
+  // console.log(this.details);
   // }
-  
+
   getMovieId(id: string): Movie | undefined {
-    return this.movies.find(m => m.movieId === id);    
+    // this.afs.collection('movies').valueChanges({idField: 'movieId'}).subscribe(res => console.log(res));
+    return this.movies.find(m => m.movieId === id);
   }
 }

@@ -24,6 +24,6 @@ export class MovieComponent {
     }
 
   fetchMovie() {
-    // this.movieSubscription = this.movieService.movieDetails.subscribe()
+    // this.movie = this.movieService.getMovieId();
   }
 }

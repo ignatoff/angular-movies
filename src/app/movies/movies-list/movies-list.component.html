@@ -1,7 +1,7 @@
 <div class="content">
 
       <div fxLayout="row wrap" fxLayoutGap="32px grid">
-         <div fxFlex="20%" *ngFor="let movie of movies | async" id="{{movie.title}}">
+         <div fxFlex="20%" *ngFor="let movie of movies | async" id="{{movie.movieId}}">
             <mat-card class="movie-card">
                <mat-card-header>
                   <mat-card-title>{{movie.title}}</mat-card-title>

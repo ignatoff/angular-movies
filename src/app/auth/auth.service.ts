@@ -6,7 +6,6 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { User } from 'src/app/shared/interfaces/user.model';
-import { AuthData } from 'src/app/shared/interfaces/auth-data.model';
 
 
 @Injectable()
